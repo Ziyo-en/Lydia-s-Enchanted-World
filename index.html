@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffe4ef">
+  <title>Lydia's Enchanted World 🎀</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="sparkle-layer" id="sparkles" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a href="#home" class="logo">🎀 Lydia's World</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="navigation">
+      <a href="#home">Home</a>
+      <a href="#dino">Dino</a>
+      <a href="#bunny">Bunny</a>
+      <a href="#galaxy">Galaxy</a>
+      <a href="#messages">Messages</a>
+      <a href="#diary">Diary</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section class="hero section" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">✧ A little universe made with love ✧</span>
+        <h1>Welcome to<br><span>Lydia's</span> Enchanted World</h1>
+        <p class="hero-description">
+          A tiny magical kingdom filled with pink dreams,
+          silly dinosaurs, sleepy bunnies and endless stars.
+        </p>
+        <a class="main-button" href="#explore">Explore my world ✨</a>
+        <p class="small-note">Made especially for one extraordinary human. 💗</p>
+      </div>
+
+      <div class="hero-art">
+        <div class="moon">☾</div>
+        <div class="floating-star star-one">✦</div>
+        <div class="floating-star star-two">✧</div>
+        <div class="floating-star star-three">⋆</div>
+        <div class="castle">🏰</div>
+        <div class="hero-bunny">🐰</div>
+        <div class="hero-caption">Once upon a time...</div>
+      </div>
+    </section>
+
+    <!-- EXPLORATION -->
+    <section class="section" id="explore">
+      <div class="section-heading">
+        <span class="eyebrow">✧ Choose your adventure ✧</span>
+        <h2>Little Magical Corners</h2>
+        <p>Every door hides something special.</p>
+      </div>
+
+      <div class="world-grid">
+        <a href="#dino" class="world-card pink-card">
+          <span class="card-emoji">🦖</span>
+          <h3>Dino Kingdom</h3>
+          <p>Meet your tiny chaotic dinosaur.</p>
+          <span class="card-link">Enter kingdom →</span>
+        </a>
+
+        <a href="#bunny" class="world-card purple-card">
+          <span class="card-emoji">🐰</span>
+          <h3>Bunny Garden</h3>
+          <p>Catch a little bunny if you can!</p>
+          <span class="card-link">Visit garden →</span>
+        </a>
+
+        <a href="#galaxy" class="world-card blue-card">
+          <span class="card-emoji">🌌</span>
+          <h3>Galaxy Room</h3>
+          <p>Discover stars and distant planets.</p>
+          <span class="card-link">Travel to space →</span>
+        </a>
+
+        <a href="#messages" class="world-card peach-card">
+          <span class="card-emoji">💌</span>
+          <h3>Secret Letters</h3>
+          <p>Some words are hidden inside.</p>
+          <span class="card-link">Open letters →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- DINO -->
+    <section class="section feature-section" id="dino">
+      <div class="section-heading">
+        <span class="eyebrow">✧ The most suspicious creature ✧</span>
+        <h2>Dino Kingdom 🦖</h2>
+        <p>He has something VERY important to tell you.</p>
+      </div>
+
+      <div class="feature-card dino-card">
+        <div class="big-character" id="dinoCharacter">🦖</div>
+        <div class="speech-bubble" id="dinoSpeech" aria-live="polite">
+          Hello, Lydia! I have been waiting for you.
+        </div>
+        <p class="character-name">Sir Pickles the Third</p>
+        <p class="muted">Professional troublemaker. Amateur scientist.</p>
+        <button class="main-button" id="dinoButton">Annoy me, dinosaur!</button>
+      </div>
+    </section>
+
+    <!-- BUNNY -->
+    <section class="section feature-section" id="bunny">
+      <div class="section-heading">
+        <span class="eyebrow">✧ A very important mission ✧</span>
+        <h2>The Runaway Bunny 🐰</h2>
+        <p>Apparently, this bunny has no respect for personal space.</p>
+      </div>
+
+      <div class="feature-card bunny-card">
+        <div class="bunny-stage" id="bunnyStage">
+          <button class="bunny-target" id="bunnyTarget" aria-label="Catch the bunny">🐰</button>
+        </div>
+        <p id="bunnyMessage" aria-live="polite">Psst... the bunny is hiding. Can you find it?</p>
+        <p class="muted">Catch the bunny to unlock a surprise!</p>
+        <button class="secondary-button" id="resetBunny">Reset bunny ↻</button>
+      </div>
+    </section>
+
+    <!-- GALAXY -->
+    <section class="section feature-section" id="galaxy">
+      <div class="section-heading">
+        <span class="eyebrow">✧ Somewhere beyond the clouds ✧</span>
+        <h2>Lydia's Galaxy 🌙</h2>
+        <p>Touch a planet and discover its secret.</p>
+      </div>
+
+      <div class="galaxy-container">
+        <div class="planet-list">
+          <button class="planet planet-pink" data-planet="venus">🌸<span>Pink Planet</span></button>
+          <button class="planet planet-purple" data-planet="moon">🌙<span>Moon Kingdom</span></button>
+          <button class="planet planet-blue" data-planet="saturn">🪐<span>Dream Planet</span></button>
+        </div>
+        <div class="planet-info" id="planetInfo" aria-live="polite">
+          <span class="planet-big">✨</span>
+          <h3>Choose a planet</h3>
+          <p>A little secret is waiting for you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section feature-section" id="quiz">
+      <div class="section-heading">
+        <span class="eyebrow">✧ A very serious scientific test ✧</span>
+        <h2>Are You a Magical Creature?</h2>
+      </div>
+
+      <div class="feature-card quiz-card">
+        <p class="quiz-question" id="quizQuestion">What would you do if you found a tiny dragon?</p>
+        <div class="quiz-options" id="quizOptions">
+          <button class="quiz-option" data-answer="0">Adopt it immediately. 🐉</button>
+          <button class="quiz-option" data-answer="1">Ask it about the universe. 🌌</button>
+          <button class="quiz-option" data-answer="2">Give it a pink bow. 🎀</button>
+        </div>
+        <p class="quiz-result" id="quizResult" aria-live="polite"></p>
+        <button class="secondary-button hidden" id="nextQuiz">Another question ↻</button>
+      </div>
+    </section>
+
+    <!-- MESSAGES -->
+    <section class="section feature-section" id="messages">
+      <div class="section-heading">
+        <span class="eyebrow">✧ A little something for you ✧</span>
+        <h2>Secret Letters 💌</h2>
+        <p>Choose a little envelope. Don't be shy.</p>
+      </div>
+
+      <div class="letter-grid">
+        <button class="letter" data-letter="0">💌<span>Open me</span></button>
+        <button class="letter" data-letter="1">💗<span>Maybe me?</span></button>
+        <button class="letter" data-letter="2">🎀<span>Definitely me</span></button>
+      </div>
+
+      <div class="letter-result" id="letterResult" aria-live="polite">
+        <p>✨ Your secret message will appear here.</p>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section feature-section" id="achievements">
+      <div class="section-heading">
+        <span class="eyebrow">✧ Little victories ✧</span>
+        <h2>Achievement Garden ⭐</h2>
+        <p>Every discovery earns a little sparkle.</p>
+      </div>
+      <div class="achievement-grid">
+        <div class="achievement" id="achDino">🦖<span>Dino Friend</span><small>Talk to the dinosaur</small></div>
+        <div class="achievement" id="achBunny">🐰<span>Bunny Catcher</span><small>Catch the bunny</small></div>
+        <div class="achievement" id="achGalaxy">🌌<span>Space Explorer</span><small>Visit a planet</small></div>
+        <div class="achievement" id="achLetter">💌<span>Secret Keeper</span><small>Open a letter</small></div>
+        <div class="achievement" id="achQuiz">🧁<span>Little Genius</span><small>Complete a quiz</small></div>
+        <div class="achievement" id="achDiary">📖<span>Story Writer</span><small>Save a diary entry</small></div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section feature-section" id="timeline">
+      <div class="section-heading">
+        <span class="eyebrow">✧ A tiny collection of moments ✧</span>
+        <h2>Our Little Timeline 🌷</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <span>🌱</span>
+          <div><h3>The beginning</h3><p>Two people meet and a new story begins.</p></div>
+        </div>
+        <div class="timeline-item">
+          <span>🦕</span>
+          <div><h3>Dinosaur conversations</h3><p>Somehow, dinosaurs became important.</p></div>
+        </div>
+        <div class="timeline-item">
+          <span>🌌</span>
+          <div><h3>Our little universe</h3><p>A friendship full of random thoughts and discoveries.</p></div>
+        </div>
+        <div class="timeline-item">
+          <span>🎀</span>
+          <div><h3>More chapters ahead</h3><p>The best stories don't need an ending yet.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIARY -->
+    <section class="section feature-section" id="diary">
+      <div class="section-heading">
+        <span class="eyebrow">✧ A quiet little corner ✧</span>
+        <h2>Magic Diary 📖</h2>
+        <p>Write a thought, a memory or a tiny story.</p>
+      </div>
+
+      <div class="feature-card diary-card">
+        <label for="diaryInput">Dear diary...</label>
+        <textarea id="diaryInput" placeholder="Today I discovered something magical..."></textarea>
+        <button class="main-button" id="saveDiary">Save my little thought 💗</button>
+        <p id="diaryStatus" aria-live="polite"></p>
+        <div id="diaryEntries" class="diary-entries"></div>
+      </div>
+    </section>
+<!-- MOOD KINGDOM -->
+    <section class="section feature-section" id="moods">
+      <div class="section-heading">
+        <span class="eyebrow">✧ Choose your atmosphere ✧</span>
+        <h2>Kingdom of Moods 🌷</h2>
+        <p>This little kingdom changes its outfit with you.</p>
+      </div>
+
+      <div class="mood-grid">
+        <button class="mood-card" data-mood="morning">
+          <span>🌸</span>
+          <strong>Pink Morning</strong>
+          <small>Soft pink dreams</small>
+        </button>
+
+        <button class="mood-card" data-mood="moonlight">
+          <span>🌙</span>
+          <strong>Sleepy Moonlight</strong>
+          <small>Quiet magical nights</small>
+        </button>
+
+        <button class="mood-card" data-mood="chaos">
+          <span>🧚</span>
+          <strong>Chaotic Fairyland</strong>
+          <small>Maximum fairy chaos</small>
+        </button>
+      </div>
+
+      <p class="mood-status" id="moodStatus" aria-live="polite">
+        The kingdom is wearing Pink Morning. 💗
+      </p>
+    </section>
+
+    <!-- SECRET ROOM -->
+    <section class="section feature-section" id="secretRoom">
+      <div class="section-heading">
+        <span class="eyebrow">✧ Not everyone can enter ✧</span>
+        <h2>The Secret Room 🔐</h2>
+        <p>A tiny riddle stands between you and a secret.</p>
+      </div>
+
+      <div class="feature-card secret-card">
+        <div class="secret-door" id="secretDoor">🚪</div>
+
+        <h3>The Guardian's Riddle</h3>
+        <p class="riddle">
+          I am ancient, I roar, I once ruled the Earth.
+          What am I?
+        </p>
+
+        <label for="secretAnswer">Your answer:</label>
+        <input
+          id="secretAnswer"
+          class="secret-input"
+          type="text"
+          placeholder="Type your answer..."
+          autocomplete="off"
+        >
+
+        <button class="main-button" id="unlockSecret">
+          Open the magical door ✨
+        </button>
+
+        <p id="secretFeedback" aria-live="polite"></p>
+
+        <div class="secret-content hidden" id="secretContent">
+          <div class="secret-stars">✨🌷✨</div>
+          <h2>Welcome, Lydia!</h2>
+          <p>
+            You found a little place that belongs to you.
+            I hope you always remember that your curiosity,
+            imagination and wonderfully unique mind deserve
+            to be celebrated.
+          </p>
+          <p class="secret-signature">With a little magic, from me. 💗</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MYSTERY GIFT -->
+    <section class="section feature-section" id="mysteryGift">
+      <div class="section-heading">
+        <span class="eyebrow">✧ A surprise is hiding here ✧</span>
+        <h2>The Mystery Gift 🎁</h2>
+        <p>Complete a tiny mission to discover your surprise.</p>
+      </div>
+
+      <div class="feature-card gift-card">
+        <div class="gift-box" id="giftBox">🎁</div>
+        <h3 id="giftTitle">A mysterious little box</h3>
+        <p id="giftDescription">
+          Your mission: Tell the royal dinosaur one silly joke.
+        </p>
+
+        <button class="main-button" id="completeMission">
+          I completed my mission!
+        </button>
+
+        <button class="secondary-button hidden" id="openGift">
+          Open my gift 💝
+        </button>
+
+        <div id="giftResult" class="gift-result" aria-live="polite"></div>
+      </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-bow">🎀</div>
+      <h2>And they lived happily ever after...</h2>
+      <p>Or at least until the next dinosaur attack.</p>
+      <p class="footer-small">A little world made especially for Lydia. 💗</p>
+      <button class="top-button" id="backToTop">Back to the castle ↑</button>
+    </footer>
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="accessibility-tools">
+    <button id="motionToggle" title="Toggle animations" aria-pressed="false">✨ Motion</button>
+    <button id="contrastToggle" title="Toggle softer colors" aria-pressed="false">🌷 Soft mode</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
